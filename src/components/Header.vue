@@ -51,6 +51,7 @@ header{
   .menu{
     width: 33%;
     ul{
+      margin-top: 10px;
       li{
         padding: 0px 10px;        
         font-weight: bold;
