@@ -5,13 +5,15 @@
 </script>
 
 <template>
-  <div>
-    Main
-  </div>
+  <main>
+    MAIN
+  </main>
 </template>
 
 
 
 <style lang="scss" scoped>
-
+main{
+  height: 100%;
+}
 </style>

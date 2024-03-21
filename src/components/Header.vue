@@ -15,6 +15,20 @@
             title: 'Bambino',
             link: '#',
           },
+        ],
+        icons:[
+          {
+            img: '<i class="fa-light fa-user"></i>',
+            link: '#',
+          },
+          {
+            img: '<i class="fa-regular fa-heart"></i>',
+            link: '#',
+          },
+          {
+            img: '<i class="fa-solid fa-bag-shopping"></i>',
+            link: '#',
+          },
         ]
       }
     }
@@ -22,8 +36,9 @@
 </script>
 
 <template>
-  <header class="d-flex justify-content-around align-items-center">
-    <div class="menu d-flex justify-content-center">
+  <header class="d-flex justify-content-center">
+    <div class="main-wrapper d-flex justify-content-around align-items-center">
+      <div class="menu d-flex justify-content-center">
       <ul class="d-flex list-unstyled align-items-center">
         <li v-for="(item,index) in menu" :key="index">
           <a href="{{ item.link }}">{{ item.title }}</a>
@@ -35,7 +50,14 @@
         <img src="/public/boolean-logo.png" alt="logo">
       </div>
     </div>
-    <div class="icon d-flex align-items-center justify-content-center">AAA</div>
+    <div class="icon d-flex align-items-center justify-content-center">
+      <ul class="d-flex list-unstyled align-items-center">
+        <li v-for="(icon,index) in icons" :key="index">
+          <a href="{{ icon.link }}">{{ icon.img }}</a>
+        </li>
+      </ul>
+    </div>
+    </div>
   </header>
 </template>
 
@@ -48,7 +70,9 @@ header{
   height: 70px;
   background-color: $bg-color-header;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
-  .menu{
+  .main-wrapper{
+    width: 80%;
+    .menu{
     width: 33%;
     ul{
       margin-top: 10px;
@@ -57,7 +81,7 @@ header{
         font-weight: bold;
         cursor: pointer;
         a{
-          color: $color-header;
+          color: $color-font;
           text-decoration: none;
         }
       }
@@ -82,4 +106,6 @@ header{
     width: 33%;
   }
 }
+  }
+  
 </style>
