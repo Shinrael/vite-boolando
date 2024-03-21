@@ -38,7 +38,7 @@
 <template>
   <header class="d-flex justify-content-center">
     <div class="main-wrapper d-flex justify-content-around align-items-center">
-      <div class="menu d-flex justify-content-center">
+      <div class="menu d-flex">
       <ul class="d-flex list-unstyled align-items-center">
         <li v-for="(item,index) in menu" :key="index">
           <a href="{{ item.link }}">{{ item.title }}</a>
