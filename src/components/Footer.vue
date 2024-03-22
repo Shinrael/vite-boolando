@@ -15,6 +15,28 @@
             title:'Diritto di recesso',
             link: '#',
           },
+        ],
+        icons:[
+          {
+            img:'<i class="fa-brands fa-square-twitter"></i>',
+            link: '#'
+          },
+          {
+            img:'<i class="fa-brands fa-square-facebook"></i>',
+            link: '#'
+          },
+          {
+            img:'<i class="fa-brands fa-square-instagram"></i>',
+            link: '#'
+          },
+          {
+            img:'<i class="fa-brands fa-square-pinterest"></i>',
+            link: '#'
+          },
+          {
+            img:'<i class="fa-brands fa-square-youtube"></i>',
+            link: '#'
+          },
         ]
       }
     }
@@ -28,12 +50,17 @@
       <h5>Boolando S.R.L.</h5>
       <ul class="d-flex list-unstyled ">
         <li v-for="(info,index) in informations" :key="index">
-          <a href="{{ info.link }}">{{ info.title }}</a>
+          <a href="info.link">{{ info.title }}</a>
         </li>
       </ul>
       </div>
       <div class="right d-flex flex-column align-items-end ">
         <h6>Trovaci anche su</h6>
+        <ul  class="d-flex list-unstyled">
+          <li v-for="(icon,index) in icons" :key="index">
+            <a href="icon.link" v-html="icon.img"></a>
+          </li>
+        </ul>
       </div>  
     </div>
   </footer>
@@ -70,6 +97,15 @@ footer{
     width: 50%;
     h6{
       font-weight: bold;
+    }
+    ul{
+      li{
+        padding: 0px 5px; 
+        font-size: 1.3rem;
+        a{
+          color: $color-font;          
+        }
+      }
     }
   }
   }
