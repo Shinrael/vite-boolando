@@ -18,7 +18,7 @@
         ],
         icons:[
           {
-            img: '<i class="fa-light fa-user"></i>',
+            img: '<i class="fa-regular fa-user"></i>',
             link: '#',
           },
           {
@@ -41,7 +41,7 @@
       <div class="menu d-flex">
       <ul class="d-flex list-unstyled align-items-center">
         <li v-for="(item,index) in menu" :key="index">
-          <a href="{{ item.link }}">{{ item.title }}</a>
+          <a href="item.link">{{ item.title }}</a>
         </li>        
       </ul>
     </div>
@@ -50,10 +50,10 @@
         <img src="/public/boolean-logo.png" alt="logo">
       </div>
     </div>
-    <div class="icon d-flex align-items-center justify-content-center">
+    <div class="icon d-flex align-items-center justify-content-end">
       <ul class="d-flex list-unstyled align-items-center">
         <li v-for="(icon,index) in icons" :key="index">
-          <a href="{{ icon.link }}">{{ icon.img }}</a>
+          <a href="icon.link" v-html="icon.img"></a>
         </li>
       </ul>
     </div>
@@ -79,7 +79,6 @@ header{
       li{
         padding: 0px 10px;        
         font-weight: bold;
-        cursor: pointer;
         a{
           color: $color-font;
           text-decoration: none;
@@ -104,6 +103,16 @@ header{
   }
   .icon{
     width: 33%;
+    ul{
+      margin-top: 10px;
+      li{
+        padding: 0px 10px; 
+        a{
+      color: $color-font
+    }
+      }
+    }
+    
   }
 }
   }
