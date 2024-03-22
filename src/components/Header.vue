@@ -47,7 +47,7 @@
     </div>
     <div class="logo d-flex align-items-center justify-content-center">
       <div class="img-container">
-        <img src="/public/boolean-logo.png" alt="logo">
+        <img src="/public/img/boolean-logo.png" alt="logo">
       </div>
     </div>
     <div class="icon d-flex align-items-center justify-content-end">

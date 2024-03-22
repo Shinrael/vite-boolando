@@ -1,5 +1,12 @@
 <script>
   export default {
+    props:{
+      productImageFront: String,
+      productImageBack: String,
+      productBrand: String,
+      productName: String,
+      productPrice: String
+    }
     
   }
 </script>
@@ -7,12 +14,12 @@
 
 <template>
   <div class="product">
-      <img class="image-one" src="" alt="Vestito">
-      <img class="image-two" src="" alt="Vestito Alt">
+      <img class="image-one" :src="productImageFront" alt="Vestito">
+      <img class="image-two" :src="productImageBack" alt="Vestito Alt">
       <div class="product-text">
-        <p>Levi's</p>
-        <p><strong>RELAXED FIT TEE UNISEX</strong></p>
-        <p><span class="price-now">14,99 &euro;</span> <span class="first-price">29,99 &euro;</span></p>
+        <p>{{ productBrand }}</p>
+        <p><strong>{{ productName }}</strong></p>
+        <p><span class="price-now">14,99 &euro;</span> <span class="first-price">{{ productPrice }} &euro;</span></p>
       </div>
       <div class="discount">-50%</div>
       <div class="green">Sostenibilità</div>
